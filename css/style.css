@@ -1,0 +1,125 @@
+/* Global Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7); /* Soft gradient blend for weather+crypto */
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #4fc3f7, #9575cd); /* Blue for weather, purple for crypto */
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #4fc3f7;
+  color: white;
+}
+
+/* Main Content Box */
+main {
+  max-width: 850px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* Inputs & Buttons */
+input[type="text"],
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  width: 85%;
+  max-width: 400px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #9575cd;
+}
+
+button {
+  background-color: #4fc3f7;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #039be5;
+}
+
+/* Dashboard Result Boxes */
+#weather-result,
+#crypto-result {
+  margin-top: 30px;
+  background: linear-gradient(to top right, #f1f8e9, #e3f2fd);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1.05rem;
+  color: #222;
+  text-align: left;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #888;
+}

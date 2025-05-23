@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Crypto Dashboard</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="weather.html">Weather</a></li>
+      <li><a href="crypto.html">Crypto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Check Cryptocurrency Prices</h2>
+    <input type="text" id="crypto-input" placeholder="Enter crypto (e.g., bitcoin)" />
+    <button onclick="getCryptoPrice()">Get Price</button>
+
+    <div id="crypto-result">
+      <!-- Crypto data will appear here -->
+      <p><strong>Name:</strong> <span id="crypto-name">-</span></p>
+      <p><strong>Symbol:</strong> <span id="crypto-symbol">-</span></p>
+      <p><strong>Current Price (USD):</strong> $<span id="crypto-price">-</span></p>
+      <p><strong>Market Cap Rank:</strong> <span id="crypto-rank">-</span></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Crypto Dashboard | All rights reserved.</p>
+  </footer>
+
+  <script src="js/script-crypto.js"></script>
+</body>
+</html>
