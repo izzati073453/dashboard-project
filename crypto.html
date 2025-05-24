@@ -34,6 +34,8 @@
   <main>
     <h2>Check Cryptocurrency Prices</h2>
 
+    <!-- Flex container for input and time range -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
     <!-- Dropdown list of cryptocurrencies -->
     <select id="crypto-input" style="width: 300px;">
       <option value="bitcoin">Bitcoin</option>
@@ -51,6 +53,9 @@
       <option value="30">Last 30 Days</option>
       <option value="365">Last 1 Year</option>
     </select>
+  </div>
+
+  <br />
 
     <button onclick="getCryptoPrice()">Get Price</button>
 
