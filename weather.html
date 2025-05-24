@@ -22,20 +22,27 @@
   </nav>
 
   <main>
-    <h2>Check Current Weather</h2>
-    <input type="text" id="city-input" placeholder="Enter city name..." />
-    <button onclick="getWeather()">Get Weather</button>
+  <h2>Check Current Weather</h2>
+  <input type="text" id="city-input" placeholder="Enter city name..." />
 
-    <div id="weather-result">
-      <p><strong>City:</strong> <span id="city-name">-</span></p>
-      <p><strong>Temperature:</strong> <span id="temp">-</span> °C</p>
-      <p><strong>Humidity:</strong> <span id="humidity">-</span>%</p>
-      <p><strong>Condition:</strong> <span id="condition">-</span></p>
-    </div>
+  <select id="date-filter">
+    <option value="today">Today</option>
+    <option value="tomorrow">Tomorrow</option>
+    <option value="next3">Next 3 Days</option>
+  </select>
 
-    <!-- Chart canvas -->
-    <canvas id="weatherChart" width="400" height="200"></canvas>
-  </main>
+  <button onclick="getWeather()">Get Weather</button>
+
+  <div id="weather-result">
+    <p><strong>City:</strong> <span id="city-name">-</span></p>
+    <p><strong>Temperature:</strong> <span id="temp">-</span> °C</p>
+    <p><strong>Humidity:</strong> <span id="humidity">-</span>%</p>
+    <p><strong>Condition:</strong> <span id="condition">-</span></p>
+  </div>
+
+  <canvas id="weatherChart" width="400" height="200"></canvas>
+</main>
+
 
   <footer>
     <p>&copy; 2025 Weather Dashboard | All rights reserved.</p>

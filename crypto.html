@@ -17,6 +17,30 @@
 
   <!-- Select2 JS -->
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+  <style>
+    /* ✅ Tambah lebar select supaya dropdown tak terpotong */
+    .crypto-form-container select {
+      min-width: 180px;
+      max-width: 100%;
+    }
+
+    .crypto-form-container {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    #crypto-result p {
+      margin: 4px 0;
+    }
+
+    canvas {
+      max-width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -78,7 +102,8 @@
       $('#crypto-input').select2({
         placeholder: "Select a cryptocurrency",
         allowClear: true,
-        dropdownParent: $('.crypto-form-container') // ✅ Betulkan parent
+        width: 'resolve', // ✅ Biar dia ikut auto width
+        dropdownAutoWidth: true
       });
     });
   </script>
