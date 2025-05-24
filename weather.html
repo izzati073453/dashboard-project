@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Weather Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <header>
@@ -25,20 +27,21 @@
     <button onclick="getWeather()">Get Weather</button>
 
     <div id="weather-result">
-      <!-- Weather data will appear here -->
       <p><strong>City:</strong> <span id="city-name">-</span></p>
       <p><strong>Temperature:</strong> <span id="temp">-</span> °C</p>
       <p><strong>Humidity:</strong> <span id="humidity">-</span>%</p>
       <p><strong>Condition:</strong> <span id="condition">-</span></p>
     </div>
-     <canvas id="weatherChart" width="400" height="200"></canvas>
+
+    <!-- Chart canvas -->
+    <canvas id="weatherChart" width="400" height="200"></canvas>
   </main>
 
   <footer>
     <p>&copy; 2025 Weather Dashboard | All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Your JS script -->
   <script src="js/script-weather.js"></script>
 </body>
 </html>
