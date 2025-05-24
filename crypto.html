@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Crypto Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Select2 CSS for searchable dropdown -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+  <!-- Chart.js for charts -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- jQuery for Select2 -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Select2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body>
   <header>
@@ -22,7 +33,25 @@
 
   <main>
     <h2>Check Cryptocurrency Prices</h2>
-    <input type="text" id="crypto-input" placeholder="Enter crypto (e.g., bitcoin)" />
+
+    <!-- Dropdown list of cryptocurrencies -->
+    <select id="crypto-input" style="width: 300px;">
+      <option value="bitcoin">Bitcoin</option>
+      <option value="ethereum">Ethereum</option>
+      <option value="tether">Tether</option>
+      <option value="binancecoin">BNB</option>
+      <option value="ripple">Ripple</option>
+      <option value="cardano">Cardano</option>
+      <option value="dogecoin">Dogecoin</option>
+    </select>
+
+    <!-- Time range selector -->
+    <select id="time-range">
+      <option value="7">Last 7 Days</option>
+      <option value="30">Last 30 Days</option>
+      <option value="365">Last 1 Year</option>
+    </select>
+
     <button onclick="getCryptoPrice()">Get Price</button>
 
     <div id="crypto-result">
@@ -32,13 +61,26 @@
       <p><strong>Current Price (USD):</strong> $<span id="crypto-price">-</span></p>
       <p><strong>Market Cap Rank:</strong> <span id="crypto-rank">-</span></p>
     </div>
+
+    <!-- Optional chart container -->
+    <canvas id="priceChart" width="400" height="200" style="margin-top: 20px;"></canvas>
   </main>
 
   <footer>
     <p>&copy; 2025 Crypto Dashboard | All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Your custom script -->
   <script src="js/script-crypto.js"></script>
+
+  <!-- Initialize Select2 -->
+  <script>
+    $(document).ready(function () {
+      $('#crypto-input').select2({
+        placeholder: "Select a cryptocurrency",
+        allowClear: true
+      });
+    });
+  </script>
 </body>
 </html>
