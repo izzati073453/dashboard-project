@@ -34,40 +34,34 @@
   <main>
     <h2>Check Cryptocurrency Prices</h2>
 
-    <!-- Flex container for input and time range -->
-    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
-    <!-- Dropdown list of cryptocurrencies -->
-    <select id="crypto-input" style="width: 300px;">
-      <option value="bitcoin">Bitcoin</option>
-      <option value="ethereum">Ethereum</option>
-      <option value="tether">Tether</option>
-      <option value="binancecoin">BNB</option>
-      <option value="ripple">Ripple</option>
-      <option value="cardano">Cardano</option>
-      <option value="dogecoin">Dogecoin</option>
-    </select>
+    <!-- ✅ FLEX container -->
+    <div class="crypto-form-container">
+      <select id="crypto-input">
+        <option value="bitcoin">Bitcoin</option>
+        <option value="ethereum">Ethereum</option>
+        <option value="tether">Tether</option>
+        <option value="binancecoin">BNB</option>
+        <option value="ripple">Ripple</option>
+        <option value="cardano">Cardano</option>
+        <option value="dogecoin">Dogecoin</option>
+      </select>
 
-    <!-- Time range selector -->
-    <select id="time-range">
-      <option value="7">Last 7 Days</option>
-      <option value="30">Last 30 Days</option>
-      <option value="365">Last 1 Year</option>
-    </select>
-  </div>
+      <select id="time-range">
+        <option value="7">Last 7 Days</option>
+        <option value="30">Last 30 Days</option>
+        <option value="365">Last 1 Year</option>
+      </select>
 
-  <br />
-
-    <button onclick="getCryptoPrice()">Get Price</button>
+      <button onclick="getCryptoPrice()">Get Price</button>
+    </div>
 
     <div id="crypto-result">
-      <!-- Crypto data will appear here -->
       <p><strong>Name:</strong> <span id="crypto-name">-</span></p>
       <p><strong>Symbol:</strong> <span id="crypto-symbol">-</span></p>
       <p><strong>Current Price (USD):</strong> $<span id="crypto-price">-</span></p>
       <p><strong>Market Cap Rank:</strong> <span id="crypto-rank">-</span></p>
     </div>
 
-    <!-- Optional chart container -->
     <canvas id="priceChart" width="400" height="200" style="margin-top: 20px;"></canvas>
   </main>
 
@@ -83,7 +77,8 @@
     $(document).ready(function () {
       $('#crypto-input').select2({
         placeholder: "Select a cryptocurrency",
-        allowClear: true
+        allowClear: true,
+        dropdownParent: $('.crypto-form-container') // ✅ Betulkan parent
       });
     });
   </script>
